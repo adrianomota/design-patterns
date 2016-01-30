@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Facade.Model.Model.Base
+﻿namespace Facade.Model.Model.Base
 {
     public abstract class BaseModel
     {

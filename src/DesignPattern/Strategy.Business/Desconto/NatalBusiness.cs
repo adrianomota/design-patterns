@@ -1,5 +1,4 @@
-﻿using System;
-using Strategy.Pattern;
+﻿using Strategy.Pattern;
 
 namespace Strategy.Business
 {

@@ -1,6 +1,5 @@
 ﻿using System;
 using Adapter.Business.Base;
-using Adapter.Model;
 
 namespace Adapter.Business
 {

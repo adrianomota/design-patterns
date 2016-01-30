@@ -1,6 +1,4 @@
-﻿using Adapter.Model;
-
-namespace Adapter.Business.Base
+﻿namespace Adapter.Business.Base
 {
     public interface IAdministradora
     {

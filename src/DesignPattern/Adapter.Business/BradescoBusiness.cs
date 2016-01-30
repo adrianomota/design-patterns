@@ -1,4 +1,5 @@
-﻿using Adapter.Business.Base;
+﻿using System.Diagnostics;
+using Adapter.Business.Base;
 using Adapter.Model;
 
 namespace Adapter.Business
@@ -7,7 +8,7 @@ namespace Adapter.Business
     {
         public void EmitirBoleto(Boleto boleto_)
         {
-            throw new System.NotImplementedException();
+            Debug.WriteLine("Emitindo boleto no bradesco...");
         }
     }
 }

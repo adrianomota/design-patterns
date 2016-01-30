@@ -1,5 +1,4 @@
-﻿using Facade;
-using Facade.Model.Model;
+﻿using Facade.Model.Model;
 using NUnit.Framework;
 
 namespace Facade.UnitTest
