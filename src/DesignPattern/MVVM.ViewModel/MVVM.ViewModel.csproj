@@ -42,7 +42,18 @@
   <ItemGroup>
     <Compile Include="Cliente\CadastrarViewModel.cs" />
     <Compile Include="Cliente\ListarViewModel.cs" />
+    <Compile Include="Events\DispararClick.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVVM.Model\MVVM.Model.csproj">
+      <Project>{28e1b27a-d0d3-49f6-a1be-5b529a282fa1}</Project>
+      <Name>MVVM.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
