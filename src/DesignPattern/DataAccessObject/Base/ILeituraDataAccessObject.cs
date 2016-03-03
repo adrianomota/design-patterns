@@ -1,7 +1,9 @@
-﻿namespace DataAccessObject.Base
+﻿using System.Collections.Generic;
+
+namespace DataAccessObject.Base
 {
-    public interface ILeituraDataAccessObject
+    public interface ILeituraDataAccessObject<T>
     {
-        void GetAll();
+        IEnumerable<T> GetAll();
     }
 }

@@ -1,11 +1,11 @@
 ﻿namespace DataAccessObject.Base
 {
-    public interface IGravacaoDataAccessObject
+    public interface IGravacaoDataAccessObject<T>
     {
-        void Add();
+        void Add(T obj);
 
-        void Update();
+        void Update(T obj);
 
-        void Remove();
+        void Remove(T obj);
     }
 }

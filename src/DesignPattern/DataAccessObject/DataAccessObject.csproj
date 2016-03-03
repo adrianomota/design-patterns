@@ -30,7 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,13 +47,21 @@
     <Compile Include="Base\IGravacaoDataAccessObject.cs" />
     <Compile Include="Base\ILeituraDataAccessObject.cs" />
     <Compile Include="Base\IPesquisarDataAccessObject.cs" />
-    <Compile Include="Connection.cs" />
+    <Compile Include="Context\ConnectionContext.cs" />
+    <Compile Include="EntityConfiguration\ContatoConfiguration.cs" />
+    <Compile Include="EntityConfiguration\EstadoCivilConfiguration.cs" />
+    <Compile Include="EntityConfiguration\SexoConfiguration.cs" />
     <Compile Include="Implementation\ContatoDataAccessObject.cs" />
     <Compile Include="Implementation\EstadoDataAccessObject.cs" />
     <Compile Include="Implementation\SexoDataAccessObject.cs" />
     <Compile Include="Interfaces\IContatoDataAccessObject.cs" />
     <Compile Include="Interfaces\IEstadoCivilDataAccessObject.cs" />
     <Compile Include="Interfaces\ISexoDataAccessObject.cs" />
+    <Compile Include="Migrations\201602201406407_create_database.cs" />
+    <Compile Include="Migrations\201602201406407_create_database.Designer.cs">
+      <DependentUpon>201602201406407_create_database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +69,11 @@
       <Project>{e5462bfd-820a-4ef9-a49b-b04302246fe4}</Project>
       <Name>DataAccessObject.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602201406407_create_database.resx">
+      <DependentUpon>201602201406407_create_database.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

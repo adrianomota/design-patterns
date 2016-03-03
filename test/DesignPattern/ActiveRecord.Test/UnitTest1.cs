@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DataAccessLayer
+namespace ActiveRecord.Test
 {
     [TestClass]
     public class UnitTest1

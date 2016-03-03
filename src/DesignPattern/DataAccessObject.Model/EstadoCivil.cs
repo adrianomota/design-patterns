@@ -4,6 +4,12 @@ namespace DataAccessObject.Model
 {
     public sealed class EstadoCivil:Base
     {
-        public String Nome { get; set; }
+        private  EstadoCivil(){}
+
+        public EstadoCivil(string nome)
+        {
+            Nome = nome;
+        }
+        public string Nome { get; private set; }
     }
 }
