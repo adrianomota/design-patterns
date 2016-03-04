@@ -20,7 +20,7 @@ namespace Adapter.Business
             if (string.IsNullOrWhiteSpace(boleto_.Sacado))
                 throw new ApplicationException("Informe o sacado");
 
-            if (boleto_.valor >= VALOR_MAXIMO_BOLETO)
+            if (boleto_.Valor >= VALOR_MAXIMO_BOLETO)
                 throw new ApplicationException("Valor máximo excedido!!");
             
             

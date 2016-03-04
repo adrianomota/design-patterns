@@ -14,7 +14,7 @@ namespace Adapter.Business
             if (string.IsNullOrWhiteSpace(boleto_.Sacado))
                 throw new ApplicationException("Informe o sacado");
 
-            if (boleto_.valor <= 0)
+            if (boleto_.Valor <= 0)
                 throw new ApplicationException("Valor inválido!");
 
 

@@ -10,7 +10,7 @@ namespace Adapter.Business
         private BilletJPMorgan _boletoJpMorgan = new BilletJPMorgan();
         public void EmitirBoleto(Boleto boleto_)
         {
-            _boletoJpMorgan.SendBillet(boleto_.valor);
+            _boletoJpMorgan.SendBillet(boleto_.Valor);
         }
     }
 }
