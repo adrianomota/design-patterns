@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace ActiveRecord.Model
 {
@@ -10,10 +11,7 @@ namespace ActiveRecord.Model
     {
         private readonly ActiveRecordContext _context;
 
-        private Contato()
-        {
-            _context = new ActiveRecordContext();
-        }
+        private Contato(){}
 
         public Contato(string nome_, string email_, string telefone_, DateTime dataNascimento_)
         {
@@ -21,6 +19,8 @@ namespace ActiveRecord.Model
             Email = email_;
             Telefone = telefone_;
             DataNascimento = dataNascimento_;
+
+            _context = new ActiveRecordContext();
         }
 
         public Int32 CodigoSexo { get; private set; }
@@ -60,6 +60,11 @@ namespace ActiveRecord.Model
         public void AssociarEstadoCivil(int idEstadoCivil)
         {
             CodigoEstadoCivil = idEstadoCivil;
+        }
+
+        public IEnumerable<Contato> Pesquisar(Expression<Func<Contato, bool>> predicate)
+        {
+            return _context.Contato.Where(predicate);
         }
 
         public IEnumerable<Contato> Listar()
