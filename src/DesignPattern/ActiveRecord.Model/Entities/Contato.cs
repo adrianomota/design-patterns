@@ -1,6 +1,7 @@
 ﻿using ActiveRecord.Model.Context;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
@@ -74,10 +75,29 @@ namespace ActiveRecord.Model
 
         public void Cadastrar()
         {
-            //var contexto = new ValidationContext(this);
-            //var erros = new List<ValidationResult>();
-            _context.Contato.Add(this);
-            _context.SaveChanges();
+           
+            //graças aos Data Annotations conseguimos fazer validações sem IFs, sem Data Annotations, tem que fazer If(Braçal)
+
+            //A classe ValidationContext dispara as anotações de 1 determinada classe (this)
+            var contexto = new ValidationContext(this);
+
+            //cada campo que nao foi devidamente preenchido, ele retorna 1 erro = ValidationResult
+            var erros = new List<ValidationResult>();
+
+            //Disparamos as validacoes
+            Validator.TryValidateObject(this, contexto, erros);
+
+            if (!erros.Any())
+            {
+                //o this é a palavra de Contexto para pegar a classe corrente
+                //this -> filha = classe corrente
+                //base -> classe pai
+
+                _context.Contato.Add(this);
+                _context.SaveChanges();
+            }
+
+         
         }
 
         public void Atualizar()
