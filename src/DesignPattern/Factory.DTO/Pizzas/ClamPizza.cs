@@ -10,11 +10,5 @@ namespace Factory.DataTransferObject.Pizzas
         {
             Name = name;
         }
-
-        public string SetName(string name)
-        {
-            Name = name;
-            return Name;
-        }
     }
 }

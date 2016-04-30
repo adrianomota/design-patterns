@@ -4,24 +4,21 @@ namespace Factory.DataTransferObject.Base
 {
     public abstract class Pizza
     {
-        public void Prepare()
-        {
-            Debug.WriteLine("preparar...");
-        }
-
+        public abstract void Prepare();
+    
         public void Bake()
         {
-            Debug.WriteLine("bake...");
+            Debug.WriteLine("Assar por 25 minutos...");
         }
 
         public void Cut()
         {
-            Debug.WriteLine("cut...");
+            Debug.WriteLine("Cortar a pizza em fatias diagonais...");
         }
 
         public void Box()
         {
-            Debug.WriteLine("box...");
+            Debug.WriteLine("Colocar a pizza na caixa oficial da pizzaria");
         }
     }
 }
