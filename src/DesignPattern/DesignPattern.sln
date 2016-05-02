@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade.Model", "Facade.Model\Facade.Model.csproj", "{2894B1A6-186B-4612-98AF-054E41C83C61}"
 EndProject
@@ -146,6 +146,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory.DataTransferObject", "Factory.DTO\Factory.DataTransferObject.csproj", "{BB8DF763-0AD8-4009-ABDA-4E905E00311B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory.Test", "Factory.Test\Factory.Test.csproj", "{FCFB5E19-28CE-4041-868F-4197C4611988}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Command", "Command", "{3D4032E1-58D3-418A-B7A3-C2154145185A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command.Core", "Command.Core\Command.Core.csproj", "{D0EFE938-87EA-413D-ADA9-C816C25C02B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command.Test", "..\..\test\Command.Test\Command.Test.csproj", "{F4E80519-8BC5-403F-9493-9A98F137138C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -337,6 +343,14 @@ Global
 		{FCFB5E19-28CE-4041-868F-4197C4611988}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCFB5E19-28CE-4041-868F-4197C4611988}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCFB5E19-28CE-4041-868F-4197C4611988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EFE938-87EA-413D-ADA9-C816C25C02B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EFE938-87EA-413D-ADA9-C816C25C02B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EFE938-87EA-413D-ADA9-C816C25C02B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EFE938-87EA-413D-ADA9-C816C25C02B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4E80519-8BC5-403F-9493-9A98F137138C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E80519-8BC5-403F-9493-9A98F137138C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E80519-8BC5-403F-9493-9A98F137138C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E80519-8BC5-403F-9493-9A98F137138C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -399,5 +413,7 @@ Global
 		{912A6C2A-2B73-4D2D-86DA-B6D97651AB2C} = {41A87AF7-F355-4C1C-99EE-C475CBC19552}
 		{BB8DF763-0AD8-4009-ABDA-4E905E00311B} = {AD3E51A1-6FDB-4786-855E-0D3EFE4658D4}
 		{FCFB5E19-28CE-4041-868F-4197C4611988} = {AD3E51A1-6FDB-4786-855E-0D3EFE4658D4}
+		{D0EFE938-87EA-413D-ADA9-C816C25C02B0} = {3D4032E1-58D3-418A-B7A3-C2154145185A}
+		{F4E80519-8BC5-403F-9493-9A98F137138C} = {3D4032E1-58D3-418A-B7A3-C2154145185A}
 	EndGlobalSection
 EndGlobal
