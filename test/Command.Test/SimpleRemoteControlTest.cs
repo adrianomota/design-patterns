@@ -16,22 +16,22 @@ namespace Command.Test
             var simpleRemoteControl = new SimpleRemoteControl(new List<ICommand>(7)
             {
                 new LightOnCommand(new Light()),
-                new LightOnCommand(new Light()),
-                new LightOnCommand(new Light()),
-                new LightOnCommand(new Light()),
-                new LightOnCommand(new Light()),
-                new LightOnCommand(new Light()),
-                new LightOnCommand(new Light())
+                new NoCommand(),
+                new NoCommand(),
+                new NoCommand(),
+                new NoCommand(),
+                new NoCommand(),
+                new NoCommand()
             },
             new List<ICommand>(7)
             {
                new LightOffCommand(new Light()),
-               new LightOffCommand(new Light()),
-               new LightOffCommand(new Light()),
-               new LightOffCommand(new Light()),
-               new LightOffCommand(new Light()),
-               new LightOffCommand(new Light()),
-               new LightOffCommand(new Light())
+               new NoCommand(),
+               new NoCommand(),
+               new NoCommand(),
+               new NoCommand(),
+               new NoCommand(),
+               new NoCommand()
             },
                new NoCommand());
             //action
